@@ -1,0 +1,88 @@
+$light-blue: rgb(50, 200, 246);
+$brown : rgb(115, 107, 33);
+
+.bg-brown { background-color: $brown; }
+.bg-blue {  background-color: $light-blue; }
+.brown { color: $brown; }
+.blue {  color: $light-blue; }
+
+.bar-container {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+
+  .column {
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: center;
+    height: 999px;
+    width: 12em;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+    .bar-container {
+      align-self: center;
+      width: 10em;
+      
+      &.variable {
+        height: 200px;
+      }
+
+      &.contact-us {
+        height: 250px;
+      }
+    }
+
+    .amount-container {
+      padding-top: 0.3em;
+      display: flex;
+      justify-content: center;
+      height: 2.3em;
+      font-size: 28px;
+      line-height: 28px;
+    }
+    
+    .avoided-container {
+      font-size: 14px;
+    }
+    
+    .button-container {
+      padding: 10px;
+      .button {
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        padding: 10px;
+        border: 0px solid;
+      }
+    }
+  }
+}
+
+.vertical-slider {
+  width: 10em;
+
+  .thumb {
+    background-color: #777;
+    width: 10em;
+    height: 1.4em;
+    line-height: 1.4em;
+    border-radius: 0px;
+    border: 1px solid white;
+    color: white;
+    &.active {
+      border-radius: 0px;
+      outline-color: transparent;
+    }
+  }
+  .track {
+    // &.track-0 {
+    //   background-color: green;
+    // }
+    // &.track-1 {
+    //   background-color: red;
+    // }
+  }
+}
