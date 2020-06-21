@@ -15,7 +15,7 @@ $brown : rgb(115, 107, 33);
     flex-grow: 1;
     flex-direction: column;
     text-align: center;
-    height: 999px;
+    height: 550px;
     width: 12em;
 
     display: flex;
@@ -51,38 +51,83 @@ $brown : rgb(115, 107, 33);
     .button-container {
       padding: 10px;
       .button {
+        cursor: pointer;
         color: white;
         font-size: 17px;
         border-radius: 10px;
         padding: 10px;
         border: 0px solid;
       }
+      .button:active {
+        opacity: 0.6;
+        font-weight: bold;
+      }
+    }
+
+    .vertical-slider {
+      width: 10em;
+    
+      .thumb {
+        background-color: #777;
+        width: 10em;
+        height: 1.4em;
+        line-height: 1.4em;
+        border-radius: 0px;
+        border: 1px solid white;
+        color: white;
+        &.active {
+          border-radius: 0px;
+          outline-color: transparent;
+        }
+      }
+      .track {
+      }
     }
   }
 }
 
-.vertical-slider {
-  width: 10em;
+.basket-container {
+  background-color: #c6c6c6;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 100px;
+  margin-top: 50px;
+  width: 100vw;
+  margin-left: -100px;
 
-  .thumb {
-    background-color: #777;
-    width: 10em;
-    height: 1.4em;
-    line-height: 1.4em;
-    border-radius: 0px;
-    border: 1px solid white;
-    color: white;
-    &.active {
-      border-radius: 0px;
-      outline-color: transparent;
+  .column {
+    flex-grow: 1;
+    padding: 10px;
+
+    &.total {
+      flex-direction: column;
+
+      .top {
+        font-size: 14px;
+      }
+      .bottom {
+        font-size: 24px;
+        font-weight: bold;
+      }
     }
-  }
-  .track {
-    // &.track-0 {
-    //   background-color: green;
-    // }
-    // &.track-1 {
-    //   background-color: red;
-    // }
+
+    &.comitment {
+      font-size: 17px;
+    }
+
+    .button {
+      background-color: #d12d26;
+      color: white;
+      width: 100%;
+      height: 100%;
+      border: 0px solid;
+      border-radius: 10px;
+    }
+
+    .klarna-image {
+      width: 98px;
+      height: auto;
+    }
   }
 }
